@@ -1,0 +1,16 @@
+{
+  "name": "zanox-feed-import",
+  "version": "0.0.0",
+  "description": "",
+  "main": "queries.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Rudd",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^1.0.2",
+    "node-expat": "^2.3.0",
+    "superagent": "^0.18.1"
+  }
+}
