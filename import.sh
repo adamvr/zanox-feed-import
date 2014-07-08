@@ -26,7 +26,5 @@ mongoimport --host "localhost" --collection "$collection" --db "$db" --headerlin
 
 # Set up indicies
 echo "Setting up indices"
-mongo "$db" 2>&1 >/dev/null <<-EOF
-  db.collection.ensureIndex({product_name: 1});
-  db.collection.ensureIndex({product_name: -1});
-  EOF
+echo "db.$collection.ensureIndex({product_name: 1})" | mongo "$db" 2>&1 >/dev/null
+echo "db.$collection.ensureIndex({product_name: -1})" | mongo "$db" 2>&1 >/dev/null
